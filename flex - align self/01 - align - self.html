@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Align Self</title>
+
+    <style>
+        .container{
+            display: flex;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            max-width: 350px;
+            align-items: center;
+        }
+
+        .align-container{
+            align-items: center;
+        }
+
+        .item{
+            background-color: chocolate;
+            color: white;
+            font-size: 24px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <section class="container align-container">
+        <div class="item auto">AAAAA</div>
+        <div class="item auto">LOREM PUT IN SHOW</div>
+        <div class="item auto">C</div>
+        <div class="item auto">D</div>
+    </section>
+
+    <section class="container align-container">
+        <div class="item stretch">AAAAA</div>
+        <div class="item end">LOREM PUT IN SHOW</div>
+        <div class="item start">C</div>
+        <div class="item auto">D</div>
+    </section>
+
+    <section class="container align-container">
+        <div class="item stretch">AAAAA</div>
+        <div class="item start">LOREM PUT IN SHOW</div>
+        <div class="item baseline">Check log now</div>
+        <div class="item end">D</div>
+    </section>
+</body>
+</html>
